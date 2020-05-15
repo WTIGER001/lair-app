@@ -1,0 +1,59 @@
+.nav-logo {
+    height: 100px;
+    margin: .5em;
+}
+
+.nav_title {
+    color: var(--primary-clr);
+    font-size: 3em;
+}
+.nav {
+    display: grid;
+    grid-template-columns: min-content auto;
+    align-items: center;
+    text-align: left;
+}
+
+.tools-outer {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.tools {
+    padding: 10vh;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    gap: 3em;
+}
+
+.tool {
+    display: grid;
+    gap: 1em;
+    align-content: start;
+    justify-items: center;
+    padding: 1em;
+    border-radius: 10px;
+}
+.tool:hover {
+    background: rgba(140,140,140, .4);
+    cursor: pointer;
+}
+
+.tool h3 {
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px white;
+}
+
+.tool p {
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.tool-img {
+    height: 200px;
+}

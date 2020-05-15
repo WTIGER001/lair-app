@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --primary-clr: rgb(54, 166, 242);
+    --secondary-clr: white;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial';
+    font-weight: 300;
+}
+
+.classification_u {
+    background-color: green;
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+    padding-top: 2px;
+}
+
+h1 {
+    color: rgb(54, 166, 242);
+    text-shadow: 1px 1px black;
+    font-size: 6rem;
+}
+h2 {
+    color: white;
+    text-shadow: 1px 1px black;
+    font-size: 2rem;
+}
+.btn {
+    font-size: 2em;
+    border-radius: 5px;
+    padding: .5em 2em;
+    border: 0;
+    box-shadow: 2px 2px 4px black;
+    cursor: pointer;
+}
+.btn-primary {
+    background:  rgb(54, 166, 242);
+}
+
+.logo {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}

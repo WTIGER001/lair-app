@@ -1,0 +1,39 @@
+
+.outer {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.ninja {
+    height: 50vh;
+    margin: 5em;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: auto;
+}
+
+.area {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+}
+
+.title  {
+}
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1em;
+    max-width: 30em;
+    align-items: start;
+ 
+}
