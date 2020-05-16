@@ -1,0 +1,5 @@
+<div class="tool" [routerLink]="routerLink">
+    <img class="tool-img" [src]="image" [ngStyle]="{'height' : height}">
+    <h3 *ngIf="title">{{title}}</h3>
+    <p *ngIf="description">{{description}}</p>
+</div>

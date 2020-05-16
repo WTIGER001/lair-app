@@ -1,0 +1,23 @@
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.get-started p {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+
+.get-started {
+    display: grid;
+    width: 50vw;
+    gap: 5em;
+    padding-top: 5em;
+}
+
+.no-workspaces {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}

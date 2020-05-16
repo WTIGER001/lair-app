@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Workspace } from '../model/workspace';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-workspace-launch',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./workspace-launch.component.css']
 })
 export class WorkspaceLaunchComponent implements OnInit {
-
-  constructor() { }
+  workspace = new Workspace()
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+
+    setTimeout(() => {
+      this.router.navigate(["/workspace/1234/coding"])
+    }, 3000)
   }
 
 }

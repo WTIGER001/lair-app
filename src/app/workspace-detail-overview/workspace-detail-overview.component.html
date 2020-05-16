@@ -1,1 +1,15 @@
-<p>workspace-detail-overview works!</p>
+<div class="container">
+    <div class="col1">
+        <label for="Name">Name:</label>
+        <input  type="text" class="large-text" [(ngModel)]='workspace.name' name="Name">
+        <label class="align-top" for="description">Description:</label>
+        <textarea [(ngModel)]='workspace.description' Name="description" rows="10"></textarea>
+        <label for="Shared">Shared:</label>
+        <input type="checkbox">
+    </div>
+    <div class="col2">
+        <app-image-btn image="/assets/images/trash.png" description="Delete Workspace" height="75px"></app-image-btn>
+        <app-image-btn image="/assets/images/clone.png" description="Clone Workspace" height="75px"></app-image-btn>
+        <app-image-btn image="/assets/images/archive.png" description="Archive Workspace" height="75px"></app-image-btn>
+    </div>
+</div>

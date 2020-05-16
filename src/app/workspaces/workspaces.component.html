@@ -1,1 +1,13 @@
-<p>workspaces works!</p>
+<div class="container"> 
+    <app-nav path="My Workspaces"></app-nav>
+
+    <div *ngIf="workspaces.length == 0" class="no-workspaces">
+        <div class="get-started">
+            <p>Get started by creating a development workspace or cloning a public workspace. Public workspaces can be a good start for common development patterns            </p>
+            <div class="row">
+                <app-image-btn routerLink="/workspaces/new" image="/assets/images/new_workspace.png" title="Create New Workspace"></app-image-btn>
+                <app-image-btn routerLink="/workspaces/search" image="/assets/images/search.png" title="Search for Workspaces"></app-image-btn>
+            </div>
+        </div>
+    </div>
+</div>

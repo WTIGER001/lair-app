@@ -3,6 +3,7 @@
 :root {
     --primary-clr: rgb(54, 166, 242);
     --secondary-clr: white;
+    --avail-height: calc(100vh - 40px);
 }
 *, *::before, *::after {
     box-sizing: border-box;
@@ -48,4 +49,30 @@ h2 {
     position: absolute;
     bottom: 10px;
     right: 10px;
+}
+
+input {
+    padding: .25em .5em;
+    background: rgba(255, 255, 255, .5);
+    border-radius: 5px;
+    border: 0;
+    color: white;
+}
+
+textarea {
+    padding: .25em .5em;
+    background: rgba(255, 255, 255, .5);
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    font-size: .9em;
+    align-self: stretch;
+}
+
+.large-text {
+    font-size: 1.25em;
+}
+
+.align-top {
+    align-self: flex-start;
 }

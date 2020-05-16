@@ -1,17 +1,15 @@
 <div class="outer">
     <!-- Nav -->
-    <div class="nav">
-        <img src="/assets/images/ninja.png" class="nav-logo">
-        <h1 class="nav_title">Development Home</h1>
-    </div>
+    <app-nav path="Development Home"></app-nav>
     <div class="tools-outer">
         <div class="tools">
-            <div class="tool">
+            <app-image-btn image="/assets/images/jupyter.png" title="Jupyter Hub" description="Enter Jupyter Hub."></app-image-btn>
+            <!-- <div class="tool">
                 <img class="tool-img" src="/assets/images/jupyter.png">
                 <h3>Jupyter Hub</h3>
                 <p>Enter Jupyter Hub.</p>
-            </div>
-            <div class="tool">
+            </div> -->
+            <div class="tool" routerLink="/workspaces">
                 <img class="tool-img" src="/assets/images/vscode_lg.png">
                 <h3>Code Server</h3>
                 <p>Create and launch code server workspaces</p>

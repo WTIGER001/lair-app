@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-workspace-detail-bundles',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./workspace-detail-bundles.component.css']
 })
 export class WorkspaceDetailBundlesComponent implements OnInit {
+  @Input() workspace
 
   constructor() { }
 

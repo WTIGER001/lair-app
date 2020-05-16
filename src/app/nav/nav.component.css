@@ -1,0 +1,19 @@
+.nav-logo {
+    height: 50px;
+    margin: .5em;
+    cursor: pointer;
+}
+
+.nav_title {
+    color: var(--primary-clr);
+    font-size: 2em;
+    margin-left: .5em;
+}
+.nav {
+    display: grid;
+    grid-template-columns: min-content auto;
+    align-items: center;
+    text-align: left;
+    background: rgba(0,0,0, 0.4);
+    border-bottom: 1px solid rgb(50,50,50);
+}

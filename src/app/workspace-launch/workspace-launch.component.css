@@ -1,0 +1,45 @@
+.container {
+    display: grid;
+    justify-items: center;
+}
+
+.container h3 {
+    color: white;
+    font-size: 2em;
+    text-shadow: 1px 1px black;
+}
+
+.container h1 {
+    color: white;
+    margin: .5em 0;
+}
+
+.spinner {
+    height: 400px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.spinning {
+    margin-top: 100px;
+    width: 250px;
+    height: 250px;
+    animation-name: spin;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    /* transform: rotate(3deg); */
+     /* transform: rotate(0.3rad);/ */
+     /* transform: rotate(3grad); */ 
+     /* transform: rotate(.03turn);  */
+  }
+  
+  @keyframes spin {
+      from {
+          transform:rotate(0deg);
+      }
+      to {
+          transform:rotate(360deg);
+      }
+  }

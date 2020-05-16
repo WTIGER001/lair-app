@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Workspace } from '../model/workspace';
 
 @Component({
   selector: 'app-workspace',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./workspace.component.css']
 })
 export class WorkspaceComponent implements OnInit {
-
+  tab : string = 'overview'
+  workspace = new Workspace()
+  
   constructor() { }
 
   ngOnInit(): void {

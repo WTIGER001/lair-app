@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +15,9 @@ import { WorkspaceDetailBundlesComponent } from './workspace-detail-bundles/work
 import { WorkspaceDetailDetailsComponent } from './workspace-detail-details/workspace-detail-details.component';
 import { BannerTopComponent } from './banner-top/banner-top.component';
 import { BannerBottomComponent } from './banner-bottom/banner-bottom.component';
+import { NavComponent } from './nav/nav.component';
+import { ImageBtnComponent } from './image-btn/image-btn.component';
+import { WorkspaceSearchComponent } from './workspace-search/workspace-search.component';
 
 @NgModule({
   declarations: [
@@ -28,10 +32,14 @@ import { BannerBottomComponent } from './banner-bottom/banner-bottom.component';
     WorkspaceDetailBundlesComponent,
     WorkspaceDetailDetailsComponent,
     BannerTopComponent,
-    BannerBottomComponent
+    BannerBottomComponent,
+    NavComponent,
+    ImageBtnComponent,
+    WorkspaceSearchComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

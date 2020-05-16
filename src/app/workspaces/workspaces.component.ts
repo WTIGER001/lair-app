@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./workspaces.component.css']
 })
 export class WorkspacesComponent implements OnInit {
-
+  workspaces = []
   constructor() { }
 
   ngOnInit(): void {
