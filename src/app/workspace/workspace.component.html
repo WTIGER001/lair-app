@@ -1,4 +1,6 @@
-<app-nav path="Edit Workspace"></app-nav>
+<app-nav path="Edit Workspace">
+    <app-nav-usermenu class="nav-button"></app-nav-usermenu>
+</app-nav>
 <div class="container">
     <div class="vertical-nav">
         <div class="nav-top">
@@ -10,8 +12,8 @@
             <div class="workspace-item" [class.selected]='tab==="details"'  (click)="tab='details'">Details</div>
         </div>
         <div class="nav-bottom">
-            <button class="btn btn-primary btn-pad" routerLink="/workspace/1234/launching">Launch Workspace</button>
-            <button class="btn btn-primary btn-pad">Save Changes</button>
+            <button class="btn-dark btn-big btn-pad" routerLink="/workspace/1234/launching">Launch Workspace</button>
+            <button class="btn-dark btn-big btn-pad">Save Changes</button>
         </div>
     </div>    
     <div class="detail-area">

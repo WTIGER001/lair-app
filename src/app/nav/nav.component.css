@@ -1,19 +1,30 @@
 .nav-logo {
-    height: 50px;
-    margin: .5em;
+    height: 60px;
     cursor: pointer;
+    margin-top: 7px;
 }
 
 .nav_title {
     color: var(--primary-clr);
     font-size: 2em;
     margin-left: .5em;
+    margin-top: 7px;
 }
 .nav {
     display: grid;
-    grid-template-columns: min-content auto;
+    grid-template-columns: min-content auto 1fr;
     align-items: center;
     text-align: left;
     background: rgba(0,0,0, 0.4);
     border-bottom: 1px solid rgb(50,50,50);
+    /* margin-top: 10px; */
 }
+
+.area {
+    margin-top: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+

@@ -1,5 +1,16 @@
 .coding {
     width: 100vw;
-    height: 100%;
+    height: calc(100vh - 73px);
     border: 0;
+}
+
+.workspace-details {
+    color: #7675846e;
+    padding-right: 7px;
+    display: grid;
+    align-items: flex-end;
+    gap: .5em;
+    grid-template-columns: auto auto auto;
+    justify-content: stretch;
+    user-select: none;
 }

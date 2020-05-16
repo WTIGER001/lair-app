@@ -8,9 +8,14 @@ import { Workspace } from '../model/workspace';
 })
 export class WorkspaceCodingComponent implements OnInit {
   workspace = new Workspace()
+  showExit = false
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  cancel() {
+    this.cancel
   }
 
 }

@@ -1,1 +1,10 @@
-<p class="classification_u">Unclassified</p>
+<!-- <p class="classification_u class-top">Unclassified</p> -->
+<div class="notch-{{position}}" [style.background-color]="bannerColor" [style.color]="bannerTextColor"
+  [style.font-size.px]="fontSize">
+  <div class="notch-marking">
+    <p>
+      <span [style.background-color]="bannerColor"
+        [ngStyle]="{'transform': 'perspective(5px) rotateX(' + notchRotation + 'deg)'}"></span>{{bannerText}}
+    </p>
+  </div>
+</div>

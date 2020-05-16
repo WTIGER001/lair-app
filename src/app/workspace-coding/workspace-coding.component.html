@@ -1,4 +1,11 @@
 <app-nav [path]="workspace.name">
-
+    <div class="workspace-details">
+        <div>CPU: 2</div>
+        <div>RAM: 4GB</div>
+    </div>
+    <div class="nav-button" (click)="showExit=true">
+        <fa-icon icon="times" ></fa-icon> Exit Workspace
+    </div>
 </app-nav>
 <iframe class="coding" src="http://192.168.0.182:8080" name="codingframe"></iframe>
+<app-workspace-exit-dialog *ngIf="showExit"></app-workspace-exit-dialog>

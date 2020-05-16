@@ -18,6 +18,13 @@ import { BannerBottomComponent } from './banner-bottom/banner-bottom.component';
 import { NavComponent } from './nav/nav.component';
 import { ImageBtnComponent } from './image-btn/image-btn.component';
 import { WorkspaceSearchComponent } from './workspace-search/workspace-search.component';
+import { WorkspaceExitDialogComponent } from './workspace-exit-dialog/workspace-exit-dialog.component';
+import { ExitMenuComponent } from './controls/exit-menu/exit-menu.component';
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { Icons } from './icon-library';
+import { DropdownComponent } from './controls/dropdown/dropdown.component';
+import { NavItemComponent } from './controls/nav-item/nav-item.component';
+import { NavUsermenuComponent } from './controls/nav-usermenu/nav-usermenu.component';
 
 @NgModule({
   declarations: [
@@ -35,14 +42,25 @@ import { WorkspaceSearchComponent } from './workspace-search/workspace-search.co
     BannerBottomComponent,
     NavComponent,
     ImageBtnComponent,
-    WorkspaceSearchComponent
+    WorkspaceSearchComponent,
+    WorkspaceExitDialogComponent,
+    ExitMenuComponent,
+    DropdownComponent,
+    NavItemComponent,
+    NavUsermenuComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(library: FaIconLibrary) {
+    new Icons(library);
+  }
+
+ }
