@@ -21,3 +21,59 @@
     justify-items: center;
     align-items: center;
 }
+
+.workspace {
+    width: 200px;
+    /* height: 250px; */
+    display: grid;
+    justify-items: center;
+    background: rgba(0,0,0,.6);
+    padding: .75em;
+    box-shadow: 1px 1px 6px black;
+    cursor: pointer;
+    gap: 1em;
+    border-radius: 5px;
+}
+
+.workspace img {
+    height: 75px;
+}
+
+.workspace h1 {
+    font-size: 1.25em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 180px;
+    overflow: hidden;
+}
+
+.workspace a {
+    font-size: .9em;
+}
+
+.workspace .btn-dark {
+    padding: 10px 5px;
+    margin: 0;
+    justify-self: stretch;
+}
+
+.workspace-area {
+    margin: 2em;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.workspace-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: .5em;
+    grid-template-rows: min-content;
+}
+
+.actions {
+    max-width: 250px;
+}
+
+.workspace:hover {
+    background: rgba(120,120,120,.6);
+}

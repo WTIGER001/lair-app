@@ -14,7 +14,8 @@
     
     width: 430px;
     margin-left: 50px;
-    background: rgb(64, 64, 64);
+    /* background: rgb(64, 64, 64); */
+    background: rgba(0,0,0,.6);
 }
 
 .nav-top {

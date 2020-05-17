@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { BackendService } from '../backend.service';
+import { Workspace } from '../model/workspace';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-workspaces',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkspacesComponent implements OnInit {
   workspaces = []
-  constructor() { }
+  constructor( private backend: BackendService) {
+    this.backend.getWorkspaces().subscribe( wrk => this.workspaces = wrk)
+   }
 
   ngOnInit(): void {
   }
+
+  launch(workspace : Workspace) {
+    this.backend.launchWorkspace(workspace)
+  }
+
 
 }

@@ -1,4 +1,9 @@
+import * as shortid from 'shortid'
+
+
 export class Workspace {
+    id: string = shortid.generate()
+    
     name : string = "New Workspace"
     image : string = "/assets/images/vscode_lg.png"
     description: string = ""

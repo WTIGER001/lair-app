@@ -9,7 +9,7 @@ import {
   faLightbulb, faMap, faSun, faCloudSun, faCloudMoon, faEye, faEyeSlash, faMoon, faMapMarkerAlt, faRectanglePortrait, faRectangleWide, faDoorOpen, faCampfire, faSignature, faVectorSquare, faDrawCircle, faDrawPolygon, faDrawSquare, faImage,
   faUserShield, faHelmetBattle, faDragon, faThumbtack, faGlobe, faSwords, faDice, faSquare, faToggleOff, faToggleOn, faPencilRuler, faBars, faLightbulbOn, faLightbulbSlash, faFastForward, faStepForward, faHeart, faQuestionCircle, faThLarge,
   faFilter, faFileImport, faHistory, faTh, faEdit, faLocation, faRandom, faCloudUpload, faAddressCard, faSkullCrossbones, faSyncAlt, faHandPointer, faUsers, faUserSecret, faUsersCrown, faDoorClosed, faCloudDownload, faEllipsisV, faCheckDouble,
-  faMousePointer, faUserCrown, faCameraAlt, faUser, faCalendar, faCalendarAlt, faFolderPlus, faMapMarkerPlus, faTombstone, faTreasureChest, faArrowAltRight, faPaste, faDungeon, faChevronDoubleLeft, faChevronUp, faChevronDown, faPen, faUserCircle, faArchive
+  faMousePointer, faUserCrown, faCameraAlt, faUser, faCalendar, faCalendarAlt, faFolderPlus, faMapMarkerPlus, faTombstone, faTreasureChest, faArrowAltRight, faPaste, faDungeon, faChevronDoubleLeft, faChevronUp, faChevronDown, faPen, faUserCircle, faArchive, faRocketLaunch
 } from '@fortawesome/pro-solid-svg-icons';
 import { faStar, faCircle } from '@fortawesome/free-regular-svg-icons';
 import { faSquare as falSquare } from '@fortawesome/pro-light-svg-icons';
@@ -31,7 +31,7 @@ export class Icons {
 
   solidPro(l: FaIconLibrary) {
     l.addIcons(
-      faTimes, faUserCircle, faCaretDown, faCaretLeft, faCaretRight, faCaretUp, faTrashAlt, faCopy, faArchive
+      faTimes, faUserCircle, faCaretDown, faCaretLeft, faCaretRight, faCaretUp, faTrashAlt, faCopy, faArchive, faRocketLaunch
     )
   }
 

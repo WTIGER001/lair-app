@@ -1,15 +1,36 @@
-<div class="container"> 
+<div class="container">
     <app-nav path="My Workspaces">
         <app-nav-usermenu class="nav-button"></app-nav-usermenu>
     </app-nav>
 
     <div *ngIf="workspaces.length == 0" class="no-workspaces">
         <div class="get-started">
-            <p>Get started by creating a development workspace or cloning a public workspace. Public workspaces can be a good start for common development patterns            </p>
+            <p>Get started by creating a development workspace or cloning a public workspace. Public workspaces can be a
+                good start for common development patterns </p>
             <div class="row">
-                <app-image-btn routerLink="/workspaces/new" image="/assets/images/new_workspace.png" title="Create New Workspace"></app-image-btn>
-                <app-image-btn routerLink="/workspaces/search" image="/assets/images/search.png" title="Search for Workspaces"></app-image-btn>
+                <app-image-btn routerLink="/workspaces/new" image="/assets/images/new_workspace.png"
+                    title="Create New Workspace"></app-image-btn>
+                <app-image-btn routerLink="/workspaces/search" image="/assets/images/search.png"
+                    title="Search for Workspaces"></app-image-btn>
             </div>
+        </div>
+    </div>
+
+    <div *ngIf="workspaces.length > 0" class="workspace-area">
+        <div class="workspace-list">
+            <div class="workspace" *ngFor="let w of workspaces" [routerLink]="[ '/workspace', w.id]">
+                <img [src]="w.image">
+                <h1>{{w.name}}</h1>
+                <button class="btn-dark" (click)="launch(w)">
+                    <fa-icon icon="rocket-launch"></fa-icon> Launch
+                </button>
+            </div>
+        </div>
+        <div class="actions">
+            <app-image-btn routerLink="/workspaces/new" image="/assets/images/new_workspace.png"
+                description="Create New Workspace" height="100px"></app-image-btn>
+            <app-image-btn routerLink="/workspaces/search" image="/assets/images/search.png"
+            description="Search for Workspaces" height="100px"></app-image-btn>
         </div>
     </div>
 </div>
