@@ -1,7 +1,7 @@
 import * as shortid from 'shortid'
+import {Workspace as IWorkspace} from '../swagger/models'
 
-
-export class Workspace {
+export class Workspace implements IWorkspace {
     id: string = shortid.generate()
     
     name : string = "New Workspace"

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Workspace } from '../model/workspace';
-import { Router } from '@angular/router';
+
+import { Router, ActivatedRoute } from '@angular/router';
 import * as shortid from 'shortid';
 import { BackendService } from '../backend.service';
+import { Workspace } from '../model/workspace';
+import { Workspace as IWorkspace } from '../swagger/models'
 
 @Component({
   selector: 'app-workspace',
@@ -11,13 +13,19 @@ import { BackendService } from '../backend.service';
 })
 export class WorkspaceComponent implements OnInit {
   tab : string = 'overview'
-  workspace = new Workspace()
+  workspace : IWorkspace = new Workspace()
   
-  constructor(private router: Router, private backend : BackendService) { 
-
+  constructor(private router: Router, private backend : BackendService, private route: ActivatedRoute) { 
+    
   }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe( params => {
+      const id = params.get("id")
+      this.backend.getWorkspace(id).subscribe( workspace => {
+        this.workspace =workspace
+      })
+    })
   }
 
   save() {

@@ -1,4 +1,13 @@
 
+# Primary TODO
+- Get lair-api running as a docker
+-- __Deployment for the docker__
+-- Service deployment
+-- Ingress Controller
+- API Server creates a deployment
+- API Server cheks status
+
+
 # UI Todo
 - Add font awesome correctly
 - User Menu
@@ -33,16 +42,21 @@ POST /workspaces/:id save a workspace for a user
 DEL /workspaces/:id delete a workspace
 PUT /workspaces/:id update a workspace for a user
 
-GET /workspace/:id/sessions
-POST /workspace/:id/start-session
-GET /workspace/:id/session-status
+### Start a Session
+1. Receive Request
+2. Construct deployment set (in namespace) for the workspace image specified (named 'session_{workspaceid})
+3. Report status (likely just poll the kubernetes aapi every second)
+4. Once the status is complete then navigate to the address. The address should derivable like 192.168.0.182/sessions/{workspaceid}
 
-GET /session/:id - Gets the status of the session
-DELETE /session/:id - Stops a session
-POST /session/:id- Starts a session (if needed)
+### Exit a Session
+1. Receive request
+2. Issue terminate order to deployment set
+3. Navigate away (no confirmation)
 
-
-
+### Kubernetes Setup
+- Install kubernetes
+- Create a namespace
+- Create an Ingress Controller
 
 
 

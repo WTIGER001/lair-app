@@ -25,6 +25,7 @@ import { Icons } from './icon-library';
 import { DropdownComponent } from './controls/dropdown/dropdown.component';
 import { NavItemComponent } from './controls/nav-item/nav-item.component';
 import { NavUsermenuComponent } from './controls/nav-usermenu/nav-usermenu.component';
+import { ApiModule } from './swagger/api.module';
 
 @NgModule({
   declarations: [
@@ -52,8 +53,9 @@ import { NavUsermenuComponent } from './controls/nav-usermenu/nav-usermenu.compo
   imports: [
     BrowserModule,
     FormsModule,
+    FontAwesomeModule,
     AppRoutingModule,
-    FontAwesomeModule
+    ApiModule
   ],
   providers: [],
   bootstrap: [AppComponent]
