@@ -1,5 +1,5 @@
 export class WorkspaceLaunchStatus {
-    workspaceId: string
+    id: string
     status: string
     url : string
 }

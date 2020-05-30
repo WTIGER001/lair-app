@@ -11,7 +11,10 @@ export class Workspace implements IWorkspace {
     sharing: boolean = false
     bundles: []
     dockerImage = "codercom/code-server:latest"
-    workspaceLocation = "/home/john/projects/test-app"
+    workpsaceLocation = "/home/john/projects/test-app"
     activityLog = []
     timeout = 30
+    cpus: 2
+    memory: 2000
+    gpu: 0
 }

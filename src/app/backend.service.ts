@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Observable, BehaviorSubject } from 'rxjs';
-import { Workspace } from './swagger/models';
+import { Observable, BehaviorSubject, Subject } from 'rxjs';
+import { Workspace, WorkspaceStatus } from './swagger/models';
 import { Router } from '@angular/router';
 import { ApiService } from './swagger/services';
+import { delay } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -41,6 +42,34 @@ export class BackendService {
   }
 
   launchWorkspace( workspace : Workspace)  {
-    this.router.navigate(["/workspace", workspace.id, "launching"])
+    this.router.navigate(["/workspace", workspace.id, "coding"])
+  }
+
+  launchAndGetStatus(id : string) : Observable<WorkspaceStatus> {
+    return this.api.launchWorkpaceById(id)
+  }
+
+  launchAndWait(id : string, delayAmt : number = 2000)  : Observable<WorkspaceStatus> {
+    const sub = new Subject<WorkspaceStatus>()
+
+    this.api.launchWorkpaceById(id).subscribe( s => {
+      this.checkAgain(s, sub, id, delayAmt)
+    })
+
+    return sub
+  }
+
+
+  checkAgain(s: WorkspaceStatus, sub : Subject<WorkspaceStatus>, id : string, delayAmt : number) {
+    if (s.status == "running") {
+      sub.complete()
+    } else {
+      sub.next(s)
+      setTimeout(() => {
+        this.api.getWorkpaceLaunchStatus(id).subscribe( s => {
+          this.checkAgain(s, sub, id, delayAmt)
+        })
+      }, delayAmt);
+    }
   }
 }

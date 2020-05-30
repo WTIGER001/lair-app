@@ -1,1 +1,46 @@
-<p>workspace-detail-details works!</p>
+<div class="container">
+    <div class="col1">
+        <label for="Container">Container:</label>
+        <input  type="text" class="large-text" [(ngModel)]='workspace.dockerImage' name="Container" readonly>
+
+        <label for="Location">Workspace Location:</label>
+        <input  type="text" class="large-text" [(ngModel)]='workspace.workpsaceLocation' name="Location" readonly>
+
+        <label for="Timeout">Activity Timeout:</label>
+        <select [(ngModel)]="workspace.timeout">
+            <option value="30">30 Minutes</option>
+            <option value="60">1 Hour</option>
+            <option value="180">3 Hours</option>
+            <option value="720">1 Day</option>
+            <option value="21600">1 Month</option>
+        </select>
+
+        <label for="CPU">vCPU:</label>
+        <select [(ngModel)]="workspace.timeout">
+            <option value="2">2 (Default)</option>
+            <option value="4">4</option>
+            <option value="8">8</option>
+            <option value="16">16</option>
+        </select>
+        
+        <label for="Memory">vCPU:</label>
+        <select [(ngModel)]="workspace.memory">
+            <option value="2GB">2 GB (Default)</option>
+            <option value="4GB">4 GB</option>
+            <option value="8GB">8 GB</option>
+            <option value="16GB">16 GB</option>
+        </select>
+
+        
+        <label for="GPU">vCPU:</label>
+        <select >
+            <option value="No">No, I do not need a GPU (Default)</option>
+            <option value="Yes">Yes, I need a GPU</option>
+        </select>
+    </div>
+    <div class="col2">
+        <app-image-btn image="/assets/images/trash.png" description="Delete Workspace" height="75px"></app-image-btn>
+        <app-image-btn image="/assets/images/clone.png" description="Clone Workspace" height="75px"></app-image-btn>
+        <app-image-btn image="/assets/images/archive.png" description="Archive Workspace" height="75px"></app-image-btn>
+    </div>
+</div>

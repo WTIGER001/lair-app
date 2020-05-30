@@ -6,9 +6,10 @@
 
 .nav_title {
     color: var(--primary-clr);
-    font-size: 2em;
+    font-size: 3em;
     margin-left: .5em;
     margin-top: 7px;
+    font-family: var(--lair-font);
 }
 .nav {
     display: grid;

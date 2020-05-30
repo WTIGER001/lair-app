@@ -1,12 +1,25 @@
 
 # Primary TODO
 - Get lair-api running as a docker
--- __Deployment for the docker__
--- Service deployment
--- Ingress Controller
-- API Server creates a deployment
-- API Server cheks status
+- ~~Deployment for the docker~~
+- ~~Service deployment~~
+- ~~Ingress Controller~~
+- ~~API Server creates a deployment~~
+- ~~API Server cheks status~~
+- ~~APIR Server Deletes Deployment~~
 
+# Use Case - Create and Launch a Workpsace in CodeServer
+- ~~UI Creates workspace~~ (Mostly)
+- API Saves workspace to persistent store (Need to mount a volume)
+- API Launches workspace (Deployment, Service and Ingress)
+-- Need to handle 'launching' workspace that is already running and gracefully returning
+-- Need to utilize namespaces
+- UI Checks status with API
+- When status = RUNNING then the UI redirects
+- Implement the 'delete' on the exit session. All discard for now.
+
+# Questions
+- Need to figure out how to detect inactivity by the user. 
 
 # UI Todo
 - Add font awesome correctly
@@ -59,15 +72,19 @@ PUT /workspaces/:id update a workspace for a user
 - Create an Ingress Controller
 
 
+# Launch process
+Triggered by a user navigating to the /coding route. This page starts by getting a status of the deployment. If the deployment is running it just connects. Otherwise it requests a launch. 
 
 
+# Questions for Jon
 
-
-
-
-
-
-
+- How to you set it up so you can install updates? 
+- How do you handle extensions?
+- Did you stand up your own extension repo?
+- How do you deal with changes? Do you support a docker commit? 
+- How do you handle different ports? I was thinking about NGINX RP
+- How do you handle timeouts? 
+- What are the issues you have run into (except for middle mouse)
 
 # LairApp
 

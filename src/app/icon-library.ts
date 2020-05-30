@@ -31,7 +31,7 @@ export class Icons {
 
   solidPro(l: FaIconLibrary) {
     l.addIcons(
-      faTimes, faUserCircle, faCaretDown, faCaretLeft, faCaretRight, faCaretUp, faTrashAlt, faCopy, faArchive, faRocketLaunch
+      faTimes, faUserCircle, faCaretDown, faCaretLeft, faCaretRight, faCaretUp, faTrashAlt, faCopy, faArchive, faRocketLaunch, faLock
     )
   }
 

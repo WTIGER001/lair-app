@@ -11,6 +11,8 @@
     font-size: 1.5em;
     color: white;
     align-items: center;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
 }
 
 .col1 label {
@@ -18,5 +20,29 @@
 }
 
 .col2 {
+    /* display: grid; */
+}
+
+.divider {
+    grid-column: 1/-1;
+    color : var(--primary-clr);
+    border-bottom: 2px solid var(--primary-clr);
+}
+
+
+.locked {
+    position: relative;
     display: grid;
+}
+
+.locked input {
+    padding-left: 40px;
+}
+
+.lock {
+    position: absolute;
+    left: 10px;
+    transform: translateY(-50%);
+    top: 50%;
+    color: var(--input-icon);
 }

@@ -1,11 +1,69 @@
 <div class="container">
     <div class="col1">
+        <div class="divider">Overview</div>
+        <label for="ID">ID:</label>
+        <div class="locked">
+
+            <input type="text" class="med-text" [(ngModel)]='workspace.id' name="Container" readonly>
+            <fa-icon class="lock" icon="lock"></fa-icon>
+        </div>
         <label for="Name">Name:</label>
-        <input  type="text" class="large-text" [(ngModel)]='workspace.name' name="Name">
+        <input type="text" class="med-text" [(ngModel)]='workspace.name' name="Name">
         <label class="align-top" for="description">Description:</label>
         <textarea [(ngModel)]='workspace.description' Name="description" rows="10"></textarea>
         <label for="Shared">Shared:</label>
-        <input type="checkbox">
+        <select class="med-text">
+            <option value="false">No, this is a private workspace (Default)</option>
+            <option value="true">Yes, this is a workspace design for others to use</option>
+        </select>
+
+        <div class="divider">Container Scheduling</div>
+
+        <label for="Container">Container Image:</label>
+        <div class="locked">
+            <input type="text" class="med-text" [(ngModel)]='workspace.dockerImage' name="Container" readonly>
+            <fa-icon class="lock" icon="lock"></fa-icon>
+        </div>
+
+        <label for="Location">Workspace Location:</label>
+        <div class="locked">
+            <input type="text" class="med-text" [(ngModel)]='workspace.workpsaceLocation' name="Location" readonly>
+            <fa-icon class="lock" icon="lock"></fa-icon>
+        </div>
+
+        <label for="Timeout">Activity Timeout:</label>
+        <select class="med-text" [(ngModel)]="workspace.timeout">
+            <option value="30">30 Minutes</option>
+            <option value="60">1 Hour</option>
+            <option value="180">3 Hours</option>
+            <option value="720">1 Day</option>
+            <option value="21600">1 Month</option>
+        </select>
+
+        <div class="divider">Resources</div>
+
+        <label for="CPU">vCPU:</label>
+        <select class="med-text" [(ngModel)]="workspace.cpus">
+            <option value="2">2 (Default)</option>
+            <option value="4">4</option>
+            <option value="8">8</option>
+            <option value="16">16</option>
+        </select>
+
+        <label for="Memory">Memory:</label>
+        <select class="med-text" [(ngModel)]="workspace.memory">
+            <option value="2000">2 GB (Default)</option>
+            <option value="4000">4 GB</option>
+            <option value="8000">8 GB</option>
+            <option value="16000">16 GB</option>
+        </select>
+
+
+        <label for="GPU">GPU:</label>
+        <select class="med-text">
+            <option value="0">No, I do not need a GPU (Default)</option>
+            <option value="1">Yes, I need a GPU</option>
+        </select>
     </div>
     <div class="col2">
         <app-image-btn image="/assets/images/trash.png" description="Delete Workspace" height="75px"></app-image-btn>

@@ -1,11 +1,25 @@
-<app-nav [path]="workspace.name">
-    <div class="workspace-details">
-        <div>CPU: 2</div>
-        <div>RAM: 4GB</div>
+<ng-container *ngIf="status == 'running'">
+    <app-nav [path]="workspace.name">
+        <div class="workspace-details">
+            <div>CPU: 2</div>
+            <div>RAM: 4GB</div>
+        </div>
+        <div class="nav-button" (click)="showExit=true">
+            <fa-icon icon="times" ></fa-icon> Exit Workspace
+        </div>
+    </app-nav>
+    <iframe class="coding" src="http://192.168.0.182:8080" name="codingframe"></iframe>
+    <app-workspace-exit-dialog *ngIf="showExit"></app-workspace-exit-dialog>
+</ng-container>
+<ng-container *ngIf="status != 'running'">
+    <div class="container">
+        <div class="spinner">
+            <img src="/assets/images/star.png" class="spinning">
+        </div>
+        
+        <h3>Launching Workspace</h3>
+        <h1>{{workspace.name}}</h1>
+        <h1>Status: {{status}}</h1>
+        <h3 class="loading">Please Wait</h3>
     </div>
-    <div class="nav-button" (click)="showExit=true">
-        <fa-icon icon="times" ></fa-icon> Exit Workspace
-    </div>
-</app-nav>
-<iframe class="coding" src="http://192.168.0.182:8080" name="codingframe"></iframe>
-<app-workspace-exit-dialog *ngIf="showExit"></app-workspace-exit-dialog>
+</ng-container>

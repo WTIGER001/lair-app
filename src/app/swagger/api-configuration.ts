@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ApiConfiguration {
-  rootUrl: string = 'https://api.example.com/v1';
+  rootUrl: string = 'http://codelair.ninja/api/v1';
 }
 
 export interface ApiConfigurationInterface {

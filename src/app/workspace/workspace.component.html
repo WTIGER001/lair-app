@@ -7,9 +7,9 @@
             <img [src]="workspace.image">
             <h3>{{workspace.name}}</h3>
 
-            <div class="workspace-item" [class.selected]='tab==="overview"' (click)="tab='overview'">Overview</div>
+            <!-- <div class="workspace-item" [class.selected]='tab==="overview"' (click)="tab='overview'">Overview</div>
             <div class="workspace-item" [class.selected]='tab==="bundles"'  (click)="tab='bundles'">Bundles</div>
-            <div class="workspace-item" [class.selected]='tab==="details"'  (click)="tab='details'">Details</div>
+            <div class="workspace-item" [class.selected]='tab==="details"'  (click)="tab='details'">Details</div> -->
         </div>
         <div class="nav-bottom">
             <button class="btn-dark btn-big btn-pad" routerLink="/workspace/1234/launching">Launch Workspace</button>
@@ -17,8 +17,8 @@
         </div>
     </div>    
     <div class="detail-area">
-        <app-workspace-detail-overview *ngIf="tab=='overview'" [workspace]="workspace"></app-workspace-detail-overview>
-        <app-workspace-detail-bundles *ngIf="tab=='bundles'" [workspace]="workspace"></app-workspace-detail-bundles>
-        <app-workspace-detail-details *ngIf="tab=='details'" [workspace]="workspace"></app-workspace-detail-details>
+        <app-workspace-detail-overview  [workspace]="workspace"></app-workspace-detail-overview>
+        <!-- <app-workspace-detail-bundles *ngIf="tab=='bundles'" [workspace]="workspace"></app-workspace-detail-bundles> -->
+        <!-- <app-workspace-detail-details *ngIf="tab=='details'" [workspace]="workspace"></app-workspace-detail-details> -->
     </div>
 <img>

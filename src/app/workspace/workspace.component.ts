@@ -16,7 +16,9 @@ export class WorkspaceComponent implements OnInit {
   workspace : IWorkspace = new Workspace()
   
   constructor(private router: Router, private backend : BackendService, private route: ActivatedRoute) { 
-    
+    // Default workspace
+    this.workspace.id = shortid.generate().replace(/_/g, "").toLowerCase()
+    this.workspace.workpsaceLocation = "/workspaces/" + this.workspace.id
   }
 
   ngOnInit(): void {
